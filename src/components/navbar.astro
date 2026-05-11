@@ -1,11 +1,20 @@
 ---
-import "../styles/navbar.css"
+import "../styles/navbar.css";
+import { Image } from "astro:assets";
+import epis from "../assets/epis.png";
+import undc from "../assets/undc.png";
 ---
+
 <div class="nav-wrapper">
   <nav>
     <div class="nav-container">
       <!-- left -->
       <div class="nav-left">
+        <div class="nav-brand">
+          <Image src={undc} alt="logoepis" class="nav-logo" loading="eager"/>
+          <Image src={epis} alt="logoepis" class="nav-logo" loading="eager"/>
+          <span class="nav-text">DÍA DEL INGENIERO</span>
+        </div>
       </div>
       <!-- right -->
       <div class="nav-right">
