@@ -1,7 +1,8 @@
 ---
 import "../styles/body.css";
+import "../styles/fonts.css"
 import Navbar from "../components/navbar.astro";
-import "../styles/hero.css";
+import Intro from "../components/intro.astro";
 import ChevronDown from "../components/ChevronDown.tsx";
 ---
   <html lang="en">
@@ -11,7 +12,7 @@ import ChevronDown from "../components/ChevronDown.tsx";
 		<link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>VIII CIISIC | UNDC</title>
+		<title>Día del Ingeniero</title>
 	</head>
 
   	<body>
@@ -19,20 +20,6 @@ import ChevronDown from "../components/ChevronDown.tsx";
 		<canvas id="bg"></canvas>
     	<!-- navbar component -->
     	<Navbar />
-		<!-- hero -->
-		<main class="page">
-    		<section class="hero">
-    		</section>
-			<section class="about">
-			</section>
-			<section class="galeria">
-			</section>
-			<section class="comite">
-			</section>
-			<section class="footer">
-			</section>
-		</main>
-
-		<script type="module" src="/src/scripts/gradient.js"></script>
-  	</body>
+		<Intro />
+	</body>
 </html>

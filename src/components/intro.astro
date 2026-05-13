@@ -1,0 +1,32 @@
+---
+import "../styles/intro.css";
+import { Image } from "astro:assets";
+import fondo from "../assets/fondo.png";
+---
+
+<section class="intro">
+  <!-- bg -->
+  <div class="intro-background">
+    <Image src={fondo} alt="" loading="eager"/>
+  </div>
+
+  <!-- title + description -->
+  <div class="intro-overlay">
+    <h1 class="intro-title">
+      <span class="top">Feliz día del</span>
+      <span class="bottom">INGENIERO</span>
+    </h1>
+
+    <p class="intro-description">
+      <span>Honrando a quienes transforman ideas en soluciones</span>
+      <span>Escuela Profesional de Ingeniería de Sistemas de la UNDC.</span>
+    </p>
+  </div>
+
+  <!-- cards -->
+  <div class="intro-cards">
+    <div class="intro-card"></div>
+    <div class="intro-card"></div>
+    <div class="intro-card"></div>
+  </div>
+</section>

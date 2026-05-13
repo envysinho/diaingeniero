@@ -7,7 +7,9 @@
 ::-webkit-scrollbar {
   display: none;
 }
-html, body {
+
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -22,21 +24,6 @@ body {
   z-index: 0;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 1200px;
-  height: 100%;
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
-  pointer-events: none;
-  z-index: 9999;
-}
-
 #bg {
   position: fixed;
   inset: 0;
@@ -44,4 +31,5 @@ body::before {
   height: 100vh;
   z-index: 0;
   pointer-events: none;
+  background-color: blue;
 }

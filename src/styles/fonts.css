@@ -1,0 +1,61 @@
+/* creatp display font */
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/creato-display/CreatoDisplay-Thin.otf") format("opentype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/creato-display/CreatoDisplay-Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/creato-display/CreatoDisplay-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/creato-display/CreatoDisplay-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/creato-display/CreatoDisplay-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/creato-display/CreatoDisplay-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/creato-display/CreatoDisplay-Black.otf") format("opentype");
+  font-weight: 900;
+}
+
+/* astronomus font */
+
+@font-face {
+  font-family: "Astronomus";
+  src: url("/fonts/astronomus/Astronomus.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* jettbrains */
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains/JetBrainsMono.ttf") format("truetype");
+  font-weight: 100 800;
+  font-style: normal;
+}

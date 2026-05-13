@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 1;
+  z-index: 9999;
   height: 60px;
   background: none;
   align-items: center;
@@ -21,9 +21,7 @@ nav {
   background: none;
   display: flex;
   align-items: center;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
 }
 
 .nav-container {
