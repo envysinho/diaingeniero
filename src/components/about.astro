@@ -1,0 +1,145 @@
+---
+import "../styles/about.css";
+import { BookMarked } from "../components/BookMarked";
+import { AlarmClock } from "../components/AlarmClock";
+import { Wifi } from "../components/Wifi";
+import { HeartHandshake } from "../components/HeartHandshake";
+import { Trees } from "../components/Trees";
+import { PackageOpen } from "../components/PackageOpen";
+import { BellRing } from "../components/BellRing";
+import { Rocket } from "../components/Rocket";
+---
+
+<section class="about">
+  <div class="about-container">
+
+    <!-- image -->
+    <div class="about-image"></div>
+
+    <!-- content -->
+    <div class="about-text">
+
+      <!-- tabs -->
+      <div class="about-tabs">
+        <button class="tab-btn active" data-tab="about">
+          ACERCA DE
+        </button>
+
+        <button class="tab-btn" data-tab="activities">
+          ACTIVIDADES
+        </button>
+      </div>
+
+      <!-- ABOUT PANEL -->
+      <div class="about-panel">
+
+        <p class="about-description">
+            El 8 de junio se celebra en el Perú el Día del Ingeniero, una fecha especial para reconocer la labor de los profesionales que, con creatividad, conocimiento y compromiso, contribuyen al desarrollo del país. En este día se rinde homenaje a quienes, desde las diversas ramas de la ingeniería, impulsan soluciones innovadoras y construyen un futuro más sostenible y tecnológico. Al igual que el año pasado, el día 05 de Junio del 2025, la Escuela Profesional de Ingeniería de Sistemas de la UNDC llevará a cabo un evento de conmemoración dirigido a docentes, estudiantes, egresados y personal administrativo, reafirmando su compromiso con la excelencia y el orgullo sistémico.
+        </p>
+
+        <div class="about-activities">
+          <div class="logo-box"></div>
+          <div class="logo-box"></div>
+          <div class="logo-box"></div>
+          <div class="logo-box"></div>
+        </div>
+
+      </div>
+
+      <!-- ACTIVITIES PANEL (LISTA VERTICAL) -->
+      <div class="activities-panel">
+
+        <div class="activities-list">
+
+          <div class="activity-item">
+            <div class="activity-icon">
+                <BookMarked client:load />
+            </div>
+            <p>08:30 - Recepción de Asistentes</p>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">
+                <AlarmClock client:load />
+            </div>
+            <p>09:30 - Ceremonia Apertura</p>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">
+                <Wifi client:load />
+            </div>
+            <p>10:00 - Conferencia sobre Ciberseguridad</p>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">
+              <Rocket client:load />
+            </div>
+            <p>11:00 - Capacitación Habilidades del Futuro</p>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">
+                <BellRing client:load />
+            </div>
+            <p>12:00 - Break</p>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">
+            <PackageOpen client:load />
+            </div>
+            <p>12:15 - Presentación del Logo de la FI</p>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">
+                <HeartHandshake client:load />
+            </div>
+            <p>12:30 - Reconocimientos a Ingenieros destacados de Cañete</p>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">
+                <Trees client:load />
+            </div>
+            <p>2:30 - Tarde Deportiva</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const aboutPanel = document.querySelector(".about-panel");
+  const activitiesPanel = document.querySelector(".activities-panel");
+
+  if (aboutPanel && activitiesPanel && tabButtons.length) {
+
+    aboutPanel.classList.add("active");
+
+    tabButtons.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+
+        tabButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        if (index === 0) {
+          aboutPanel.classList.add("active");
+          activitiesPanel.classList.remove("active");
+        } else {
+          activitiesPanel.classList.add("active");
+          aboutPanel.classList.remove("active");
+        }
+
+      });
+    });
+
+  }
+</script>

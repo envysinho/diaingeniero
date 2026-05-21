@@ -83,28 +83,8 @@
   font-weight: 300;
 }
 
-/* cards */
-.intro-cards {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  margin: auto auto 0;
-  position: relative;
-  z-index: 2;
-  max-width: 1100px;
-  width: 100%;
-}
-
-.intro-card {
-  flex: 1;
-  min-width: 260px;
-  max-width: 350px;
-  height: 250px;
-  padding: 24px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+/* adjust position title + desc */
+.intro-title,
+.intro-description {
+  transform: translateY(-65px);
 }

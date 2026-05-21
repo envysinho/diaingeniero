@@ -1,7 +1,11 @@
 ---
 import "../styles/intro.css";
+import "../styles/introcards.css";
 import { Image } from "astro:assets";
 import fondo from "../assets/fondo.png";
+import { Wifi } from "./Wifi";
+import { Network } from "./Network";
+import { Clock8 } from "./Clock8";
 ---
 
 <section class="intro">
@@ -25,8 +29,50 @@ import fondo from "../assets/fondo.png";
 
   <!-- cards -->
   <div class="intro-cards">
-    <div class="intro-card"></div>
-    <div class="intro-card"></div>
-    <div class="intro-card"></div>
+    
+    <div class="intro-card">
+      <div class="card-image"></div>
+      <div class="card-logo">
+        <Network client:load />
+      </div>
+      <div class="card-bgtext"></div>
+      <div class="card-text">
+        <p>Conferencia magistral sobre tecnología</p>
+      </div>
+      <div class="card-date">
+        <Clock8 client:load />
+        <p>09:30 - 10:30</p>
+      </div>
+      <a href="#" class="card-button">Ver más</a>
+    </div>
+
+    <div class="intro-card">
+      <div class="card-image"></div>
+      <div class="card-logo"></div>
+      <div class="card-bgtext"></div>
+      <div class="card-text">
+        <p>Conferencia sobre habilidades blandas</p>
+      </div>
+      <div class="card-date">
+        <Clock8 client:load />
+        <p>10:50 - 11:50</p>
+      </div>
+      <a href="#" class="card-button">Ver más</a>
+    </div>
+
+    <div class="intro-card">
+      <div class="card-image"></div>
+      <div class="card-logo"></div>
+      <div class="card-bgtext"></div>
+      <div class="card-text">
+        <p>Campeonato deportivo (Fundo Don Luis)</p>
+      </div>
+      <div class="card-date">
+        <Clock8 client:load 1/>
+        <p>14:00 - 20:00</p>
+      </div>
+      <a href="#" class="card-button">Ver más</a>
+    </div>
+
   </div>
 </section>

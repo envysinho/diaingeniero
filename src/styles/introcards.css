@@ -1,0 +1,104 @@
+/* cards */
+.intro-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin: auto auto 0;
+  position: relative;
+  z-index: 2;
+  width: 1500px;
+}
+
+.intro-card {
+  flex: 1;
+  max-width: 350px;
+  height: 325px;
+  padding: 24px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  margin: 20px;
+  display: inline-block;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+  height: 70%;
+}
+
+.card-bgtext {
+  background-image: linear-gradient(0deg , #02050f, #001b9f);
+  border-radius: 30px;
+  position: absolute;
+  top: 55%;
+  left: -5px;
+  height: 65%;
+  width: 108%;
+  transform: skew(19deg, -9deg);
+}
+
+.card-logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+  bottom: 30%;
+  left: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  
+}
+
+.card-logo img {
+  height: 100%;
+}
+
+.card-text {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  left: 150px;
+  bottom: 28%;
+  padding-right: 15px;
+}
+
+.card-button {
+  position: absolute;
+  color: white;
+  right: 20px;
+  bottom: 6%;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card-button:hover {
+  background: white;
+  color: black;
+}
+
+.card-date {
+  position: absolute;
+  left: 15px;
+  bottom: 5.5%;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: white;
+  font-weight: 600;
+}
+
+.card-date svg {
+  transform: translateY(-1px);
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,178 @@
+.about {
+  width: 100%;
+  min-height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 120px 80px;
+  background: #050505;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+/* image */
+.about-image {
+  flex: 1;
+
+  max-width: 600px;
+  width: 100%;
+  height: 500px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #111, #1a1a1a, #222);
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* text side */
+.about-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* tabs */
+.about-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 60px;
+
+  margin-bottom: 35px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  position: relative;
+  padding: 5px 0;
+}
+
+.tab-btn:hover {
+  color: rgba(255,255,255,0.8);
+}
+
+.tab-btn.active {
+  color: white;
+}
+
+/* underline */
+.tab-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+
+  width: 0%;
+  height: 2px;
+
+  background: white;
+
+  transition: 0.3s ease;
+}
+
+.tab-btn.active::after {
+  width: 100%;
+}
+
+/* panels */
+.about-panel,
+.activities-panel {
+  display: none;
+  min-height: 400px;
+}
+
+.about-panel.active,
+.activities-panel.active {
+  display: block;
+}
+
+/* description */
+.about-description {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.8;
+  color: white;
+}
+
+/* logos row */
+.about-activities {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  margin-top: 40px;
+}
+
+.logo-box {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 10px;
+
+  background: white;
+}
+
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.113);
+  border-radius: 30px;
+  padding: 8px 20px;
+
+  color: rgba(255,255,255,0.75);
+  font-size: 15px;
+
+  transition: 0.3s ease;
+}
+
+.activity-item:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.activity-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.activity-icon svg {
+  width: 22px;
+  height: 22px;
+}

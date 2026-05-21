@@ -3,35 +3,49 @@
 import { motion, useAnimation } from "motion/react";
 import type { Variants } from "motion/react";
 
-interface ChevronDownProps extends React.SVGAttributes<SVGSVGElement> {
+interface BookMarkedProps extends React.SVGAttributes<SVGSVGElement> {
   width?: number;
   height?: number;
   strokeWidth?: number;
   stroke?: string;
 }
 
-const chevronVariants: Variants = {
+const bookmarkVariants: Variants = {
   normal: {
     y: 0,
-    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 25,
+    },
   },
   animate: {
-    y: [4, 0],
-    opacity: [0.3, 1],
+    y: [2, -4, 0],
     transition: {
-      duration: 0.5,
-      ease: "easeOut",
+      type: "spring",
+      stiffness: 500,
+      damping: 15,
+      mass: 1,
     },
   },
 };
 
-export default function ChevronDown({
+const staticVariants: Variants = {
+  normal: {
+    opacity: 1,
+  },
+  animate: {
+    opacity: 1,
+  },
+};
+
+const BookMarked = ({
   width = 28,
   height = 28,
   strokeWidth = 2,
   stroke = "#ffffff",
   ...props
-}: ChevronDownProps) {
+}: BookMarkedProps) => {
   const controls = useAnimation();
 
   return (
@@ -59,13 +73,21 @@ export default function ChevronDown({
         strokeLinejoin="round"
         {...props}
       >
+        {/* Bouncing bookmark */}
         <motion.path
-          d="m6 9 6 6 6-6"
-          variants={chevronVariants}
+          d="M10 2v8l3-3 3 3V2"
+          variants={bookmarkVariants}
           animate={controls}
-          initial="normal"
+        />
+        {/* Static book part */}
+        <motion.path
+          d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
+          variants={staticVariants}
+          animate={controls}
         />
       </svg>
     </div>
   );
-}
+};
+
+export { BookMarked };
